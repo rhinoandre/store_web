@@ -1,0 +1,236 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"respon",
+				"response"
+			],
+			[
+				"ro",
+				"$rootScope	AngularJS"
+			],
+			[
+				"root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"con",
+				"controller	AngularJS"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"Cus",
+				"CustomerID"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"jos",
+				"json_encode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 52.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/learnjs_service/application/controllers/api/customers_serv.php",
+		"/C/wamp/www/learnjs/js/app.js",
+		"/C/wamp/www/learnjs_service/user_guide_src/source/installation/downloads.rst",
+		"/C/wamp/www/learnjs_service/user_guide_src/source/overview/getting_started.rst",
+		"/C/wamp/www/learnjs_service/tests/codeigniter/database/query_builder/insert_test.php",
+		"/C/wamp/www/learnjs_service/index.php",
+		"/C/wamp/www/learnjs/js/lib/angular.min.js",
+		"/C/wamp/www/learnjs/application/controllers/api/customers_serv.php",
+		"/C/wamp/www/learnjs/application/controllers/api/example.php",
+		"/C/wamp/www/learnjs/application/controllers/Welcome.php",
+		"/C/wamp/www/learnjs/application/config/rest.php",
+		"/C/wamp/www/learnjs/application/controllers/api/customers.php",
+		"/C/wamp/www/learnjs/.htaccess",
+		"/C/wamp/www/learnjs/application/config/config.php",
+		"/C/wamp/www/learnjs/application/controllers/customers.php",
+		"/C/wamp/www/learnjs/application/config/database.php",
+		"/C/wamp/www/learnjs/application/config/autoload.php",
+		"/C/wamp/www/learnjs/application/controllers/api/customer.php",
+		"/C/wamp/www/learnjs/application/views/welcome_message.php",
+		"/C/Documents and Settings/andre.bazoli/Desktop/teste.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"customers"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": ".gitignore.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"learnjs_service\\user_guide_src\\source\\installation\\downloads.rst"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 147.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
