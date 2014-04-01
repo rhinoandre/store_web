@@ -1,10 +1,10 @@
 //URL to the REST Service
-SERVER_URL = "http://localhost/store_service/";
+SERVER_URL = "http://localhost/store_service/api/";
 
 //Start the angular APP
-var app = angular.module('app', ['ngRoute','ngResource']);//angular.module('app', ['ngRoute', 'ngResource']);
+$app = angular.module('app', ['ngRoute', 'ngResource']); 
 
-app.run(['$rootScope', function($rootScope){
+$app.run(['$rootScope', function($rootScope){
 	//Uma flag que define se o ícone de acesso ao servidor deve estar ativado
 	$rootScope.showLoaderFlag = false;
 
@@ -24,15 +24,18 @@ app.run(['$rootScope', function($rootScope){
 	}
 }]);
 
-app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProvider) {
+$app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 	$routeProvider.
-		when('/', {templateUrl:'view/main.html'}).
-		when('/clientes', {templateUrl:'view/clientes/main.html', controller:clientesController}).
-		when('/clientes/new', {templateUrl:'view/clientes/update.html', controller:clientesController}).
-		when('/clientes/:id', {templateUrl:'view/clientes/update.html', controller:clientesController}).
+		when('/',{templateUrl:'view/main.html'}).
+		when('/clientes',{templateUrl:'view/clientes/main.html',controller:clientesController}).
+		when('/clientes/new',{templateUrl:'view/clientes/update.html',controller:clientesController}).
+		when('/cliente/:id',{templateUrl:'view/clientes/update.html',controller:clientesController}).
+		//when('/funcionarios',{templateUrl:'view/funcionarios/main.html',controller:funcionariosController}).
 		otherwise({redirectTo:'/'});
 
-	$httpProvider.responseInterceptors.push(['$q', '$rootScoope', function($q, $rootScope){
+	
+
+	$httpProvider.responseInterceptors.push(['$q', '$rootScope', function($q, $rootScope){
 		return function(promise){
 			$rootScope.hideLoader();
 			return promise.then(function(response){
@@ -44,7 +47,7 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
 				if($error && $error.text)
 					alert("Error:" + $error.text);
 				else{
-					if(response.status=404)
+					if(response.status==404)
 						alert("Erro ao acessar o servidor. Página não encontrada.");
 					else 
 						alert("ERROR! See log  console")
@@ -54,3 +57,13 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
 		}
 	}]);
 }]);
+
+$app.filter('startFrom', function(){
+	return function(input, start){
+		if(input == null){
+			return null;
+		}
+		start = +start;
+		return input.slice(start);
+	}
+});
