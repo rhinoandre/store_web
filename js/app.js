@@ -7,7 +7,7 @@ $app = angular.module('app', ['ngRoute', 'ngResource']);
 $app.run(['$rootScope', function($rootScope){
 	//Uma flag que define se o ícone de acesso ao servidor deve estar ativado
 	$rootScope.showLoaderFlag = false;
-
+	$rootScope.message = '';
 	//Força que o ícone de acesso ao servidor seja ativado
 	$rootScope.showLoader=function(){
 		$rootScope.showLoaderFlag=true;

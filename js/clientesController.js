@@ -13,6 +13,8 @@ function clientesController($scope, $http, $routeParams, $location){
 
 	$scope.loadAll = function(){
 		$scope.showLoader();
+		if($scope.rows > 0)	$scope.rows.length = 0;
+
 		$http.get($scope.server("customers_serv/customers")).success(function(data){
 			$scope.rows = data;
 		})
@@ -24,23 +26,46 @@ function clientesController($scope, $http, $routeParams, $location){
 			$http.get($scope.server("customers_serv/customer/id/"+$routeParams.id))
 				.success(function(data){
 					$scope.row = data;
-					$scope.row.isUpdate = true;
+					$scope.isUpdate = true;
 			});
 		} else {
 			$scope.row = {};
 			$scope.CustomerID = null;
-			$scope.row.isUpdate = false;
+			$scope.isUpdate = false;
 		}
 	}
 
 	$scope.save = function(){
 
 		$scope.showLoader();
-		$http.post($scope.server("customers_serv/customer/"), $scope.row)
-			.success(function(data){
-				alert("Salvo com sucesso!");
-				console.log(data);
-				$scope.row.isUpdate = true;
-			});
+
+		if($scope.isUpdate){
+			$http.post($scope.server("customers_serv/customer/"), $scope.row)
+				.success(function(data){
+					alert('Alterado com sucesso!');
+					console.log(data);
+					history.back(1);
+				});
+		} else {
+			$http.put($scope.server("customers_serv/customer/"), $scope.row)
+				.success(function(data){
+					alert('Salvo com sucesso!');
+					console.log(data);
+					$location.path('/clientes');
+				});
+		}
+	}
+
+	$scope.delete = function(){
+		$scope.showLoader();
+
+		//if(confirm('Deseja realmente excluir o contato: ' + $scope.row.ContactName + '?')){
+			$http.delete($scope.server('customers_serv/customer/'), $scope.row)
+				 .success(function(data){
+				 	//alert('Cliente removido com sucesso!');
+				 	console.log(data);
+				 	//$location.path('/clientes');
+				 });
+		//}
 	}
 }

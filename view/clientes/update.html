@@ -4,7 +4,7 @@
 		<div class="control-group">
 			<label class="control-label">ID:</label>
 			<div class="controls" >
-				<input type="text" ng-model="row.CustomerID" class="input-small" required ng-disabled="row.isUpdate" />
+				<input type="text" ng-model="row.CustomerID" class="input-small" required ng-disabled="isUpdate" />
 			</div>
 		</div>
 		<div class="control-group">
@@ -25,5 +25,5 @@
 			<a href="#/clientes" class="btn">Voltar</a>
 		</div>
 	</form>
-	<button class="btn btn-danger pull-right" ng-click="del()">Apagar</button>
+	<button class="btn btn-danger pull-right" ng-click="delete()">Apagar</button>
 </div>
