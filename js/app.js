@@ -29,8 +29,9 @@ $app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPr
 		when('/',{templateUrl:'view/main.html'}).
 		when('/clientes',{templateUrl:'view/clientes/main.html',controller:clientesController}).
 		when('/clientes/new',{templateUrl:'view/clientes/update.html',controller:clientesController}).
-		when('/cliente/:id',{templateUrl:'view/clientes/update.html',controller:clientesController}).
-		//when('/funcionarios',{templateUrl:'view/funcionarios/main.html',controller:funcionariosController}).
+		when('/clientes/:id',{templateUrl:'view/clientes/update.html',controller:clientesController}).
+		when('/funcionarios',{templateUrl:'view/funcionarios/main.html',controller:funcionariosController}).
+		//when('/funcionarios',{templateUrl: 'view/funcionarios/main.html', controller:funcionariosController}).
 		otherwise({redirectTo:'/'});
 
 	

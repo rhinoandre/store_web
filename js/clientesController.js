@@ -45,6 +45,7 @@ function clientesController($scope, $http, $routeParams, $location){
 					alert('Alterado com sucesso!');
 					console.log(data);
 					history.back(1);
+			console.log(data);
 				});
 		} else {
 			$http.put($scope.server("customers_serv/customer/"), $scope.row)
@@ -58,14 +59,15 @@ function clientesController($scope, $http, $routeParams, $location){
 
 	$scope.delete = function(){
 		$scope.showLoader();
-
-		//if(confirm('Deseja realmente excluir o contato: ' + $scope.row.ContactName + '?')){
-			$http.delete($scope.server('customers_serv/customer/'), $scope.row)
+	 	
+		
+		if(confirm('Deseja realmente excluir o contato: ' + $scope.row.ContactName + '?')){
+			$http.delete($scope.server('customers_serv/customer/id/'+$scope.row.CustomerID))
 				 .success(function(data){
-				 	//alert('Cliente removido com sucesso!');
+				 	alert('Cliente removido com sucesso!');
 				 	console.log(data);
-				 	//$location.path('/clientes');
+				 	$location.path('/clientes');
 				 });
-		//}
+		}
 	}
 }
