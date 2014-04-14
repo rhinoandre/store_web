@@ -5,7 +5,7 @@ function funcionariosController($scope, $http, $routeParams, $location){
 	$scope.loadAll = function(){
 		$scope.showLoader();
 
-		$http.get($scope.server('/employees_serv/employees')).success(function(data){
+		$http.get($scope.server('employees_serv/employees')).success(function(data){
 			$scope.rows = data;
 		});
 	}
@@ -13,7 +13,7 @@ function funcionariosController($scope, $http, $routeParams, $location){
 	$scope.loadRow = function(id){
 		$scope.showLoader();
 
-		$http.get($scope.server('/employees_serv/employee/id/'+id)).success(function(data){
+		$http.get($scope.server('employees_serv/employee/id/'+id)).success(function(data){
 			$scope.row = data;
 			$scope.isUpdate = true;
 		});
@@ -21,9 +21,10 @@ function funcionariosController($scope, $http, $routeParams, $location){
 
 	$scope.save = function(){
 		$scope.showLoader();
-
-		$scope.put($scope.server('/employees_serv/employee', $scope.row)).success(function(data){
+		
+		$http.put($scope.server('employees_serv/employee'), $scope.row).success(function(data){
 			alert('Altearado com sucesso!');
+			console.log(data);
 			$scope.loadAll();
 		});
 	}

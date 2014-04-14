@@ -15,7 +15,7 @@
 		<tbody>
 			<tr ng-repeat="row in rows | startFrom: currentPage*pageSize| limitTo: pageSize">
 				<td>{{row.CustomerID}}</td>
-				<td><a href='#/cliente/{{row.CustomerID}}'>{{row.ContactName}}</a></td>
+				<td><a href='#/clientes/{{row.CustomerID}}'>{{row.ContactName}}</a></td>
 				<td>{{row.Phone}}</td>
 			</tr>
 		</tbody> 
